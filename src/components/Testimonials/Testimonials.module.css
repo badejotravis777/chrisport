@@ -1,0 +1,115 @@
+.testimonials {
+    padding: 9rem 8%;
+    background: radial-gradient(
+      circle at top,
+      rgba(245, 158, 11, 0.06),
+      #0b0b0b 45%
+    );
+  }
+  
+  /* Header */
+  .header {
+    max-width: 760px;
+    margin-bottom: 5rem;
+  }
+  
+  .kicker {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #f59e0b;
+  }
+  
+  .header h2 {
+    font-size: clamp(2.6rem, 4vw, 3.4rem);
+    margin-bottom: 1.3rem;
+  }
+  
+  .header p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    opacity: 0.85;
+  }
+  
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.8rem;
+  }
+  
+  /* Card */
+  .card {
+    position: relative;
+    padding: 3rem 2.5rem 2.8rem;
+    border-radius: 22px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
+  }
+  
+  /* Quote Icon */
+  .quoteIcon {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.8rem;
+    font-size: 4.5rem;
+    line-height: 1;
+    color: rgba(245, 158, 11, 0.18);
+    pointer-events: none;
+  }
+  
+  /* Quote */
+  .quote {
+    font-size: 0.96rem;
+    line-height: 1.75;
+    opacity: 0.9;
+    margin-bottom: 2.4rem;
+  }
+  
+  /* Footer */
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .footer strong {
+    display: block;
+    font-size: 0.95rem;
+  }
+  
+  .footer span {
+    display: block;
+    font-size: 0.78rem;
+    opacity: 0.65;
+    line-height: 1.4;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
