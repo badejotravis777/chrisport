@@ -36,29 +36,35 @@ const About = () => {
           <h2>Building Systems, Not Just Brands</h2>
 
           <p>
-            I’m Christian edward ngwu, a Nigerian entrepreneur, marketing strategist, and youth advocate
-            focused on building scalable brands, communities, and initiatives
-            that create measurable impact across Africa.
+          I’m Christian Edward-Ngwu, a Nigerian entrepreneur, brand strategist, consultant, and youth development advocate focused on building scalable systems that drive sustainable growth and real-world impact across Africa.
           </p>
 
           <p>
             Through <strong>Novalith Marketing</strong> and{" "}
-            <strong>Stratos HQ</strong>, I help organizations grow through digital
-            storytelling, strategic positioning, and product innovation.
+            <strong>Stratos HQ</strong>, I work with founders, startups, and organizations through consulting, strategy, and execution to clarify positioning, strengthen digital presence, and design products and platforms built for long-term relevance.
           </p>
 
           <p>
-            Beyond business, I lead <strong>The Glorylight Initiative</strong>{" "}
-            and <strong>Glorylight Football Academy</strong> — investing in youth
-            leadership, community development, and long-term social value.
+
+My work and advocacy extend into global and continental spaces. I serve as <strong>Editor-in-Chief</strong> and <strong>Lagos State Coordinator of the Youth Creative Conference</strong> under the African Union, and I am a Global Youth Ambassador with <strong>Theirworld</strong>, contributing to conversations and initiatives centered on youth development, education, and opportunity.
+          </p>
+
+          <p>
+          Beyond commercial and policy-facing work, I lead <strong>The Glorylight Initiative</strong>{" "}
+            and <strong>Glorylight Football Academy</strong> investing in youth leadership, community development, and purpose-driven initiatives that create lasting social value.
+          </p>
+
+          <p>
+          My work sits at the intersection of strategy, culture, and impact, helping ideas move from vision to execution and from execution to scale.
           </p>
 
           <div className={styles.focus}>
             <span>Focus Areas</span>
             <ul>
               <li>Brand Strategy & Growth</li>
+              <li>Consulting &Advisory</li>
               <li>Digital Products & Platforms</li>
-              <li>Youth Empowerment Programs</li>
+              <li>Youth Empowerment &Leadership Programs</li>
               <li>Community-Led Initiatives</li>
             </ul>
           </div>

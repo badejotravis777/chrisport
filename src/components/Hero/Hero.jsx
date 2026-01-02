@@ -47,60 +47,63 @@ const Hero = () => {
 
   return (
     <section className={styles.hero}>
-      <div className={styles.bgGlow} />
-      <div className={styles.grid} />
+  <div className={styles.bgGlow} />
+  <div className={styles.grid} />
 
-      {/* LEFT CONTENT */}
-      <motion.div
-        className={styles.content}
-        initial={{ opacity: 0, y: 70 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-      >
-        <span className={styles.kicker}>Founder • Strategist • Builder</span>
+  <div className={styles.heroInner}>
+    {/* IMAGE */}
+    <div className={styles.heroImage}>
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={index}
+          src={images[index]}
+          alt="Christian portrait"
+          variants={imageVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        />
+      </AnimatePresence>
+    </div>
 
-        <h1>
-          Building <span>Impactful Brands</span>
-          <br />
-          Empowering the <span>Youth Economy</span>
-        </h1>
+    {/* CONTENT */}
+    <motion.div
+      className={styles.content}
+      initial={{ opacity: 0, y: 70 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
+      <span className={styles.kicker}>Founder • Strategist • Builder</span>
 
-        <p>
-          I design, build, and scale digital products, communities, and
-          initiatives that create measurable, real-world impact across Africa.
-        </p>
+      <h1>
+        Building <span>Impactful Brands</span>
+        <br />
+        Empowering the <span>Youth Economy</span>
+      </h1>
 
-        <div className={styles.actions}>
-          <a href="#projects" className={styles.primary}>
-            View Projects
-          </a>
+      <p>
+        I design, build, and scale digital products, communities, and
+        initiatives that create measurable, real-world impact across Africa.
+      </p>
 
-          <a
-            href="https://wa.me/2349128430714?text=Hello%20Christian,%20I’d%20like%20to%20work%20with%20you."
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Let’s Work Together
-          </a>
-        </div>
-      </motion.div>
+      <div className={styles.actions}>
+        <a href="#projects" className={styles.primary}>
+          View Projects
+        </a>
 
-      {/* RIGHT AMBIENT IMAGE STACK */}
-      <div className={styles.heroImage}>
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={index}
-            src={images[index]}
-            alt="Christian portrait"
-            variants={imageVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-          />
-        </AnimatePresence>
+        <a
+          href="https://wa.me/2349128430714?text=Hello%20Christian,%20I’d%20like%20to%20work%20with%20you."
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.secondary}
+        >
+          Let’s Work Together
+        </a>
       </div>
-    </section>
+    </motion.div>
+  </div>
+</section>
+
   );
 };
 

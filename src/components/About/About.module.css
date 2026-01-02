@@ -163,10 +163,11 @@
   }
   
   /* Responsive */
-  @media (max-width: 900px) {
+  @media (max-width: 650px) {
     .wrapper {
       grid-template-columns: 1fr;
       gap: 4rem;
+      overflow-x: hidden !important;
     }
   
     .imageFrame {
@@ -175,6 +176,7 @@
   
     .text {
       text-align: left;
+      overflow-x: hidden !important;
     }
   }
   

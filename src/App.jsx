@@ -1,5 +1,4 @@
 import styles from './App.module.css';
-
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Impact from './components/Impact/Impact';

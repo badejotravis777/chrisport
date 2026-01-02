@@ -16,10 +16,9 @@ const Gallery = () => {
         transition={{ duration: 0.5 }}
       >
         <span className={styles.kicker}>Moments</span>
-        <h2>Highlights & Achievements</h2>
+        <h2>Milestones & Leadership Moments</h2>
         <p>
-          A visual record of leadership, community impact, collaboration, and
-          growth across different initiatives.
+        Key moments across leadership, youth impact, collaboration, and public engagement.
         </p>
       </motion.div>
 

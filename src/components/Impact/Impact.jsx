@@ -4,19 +4,19 @@ import styles from "./Impact.module.css";
 const stats = [
   {
     value: "70+",
-    label: "Young professionals trained through leadership & media programs",
+    label: "Young professionals trained through leadership, media, and capacity-building programs",
   },
   {
     value: "4+",
-    label: "Organizations founded across marketing, youth & community sectors",
+    label: "Organizations founded across marketing, youth development, and community sectors",
   },
   {
     value: "10+",
-    label: "Community outreach & youth empowerment projects executed",
+    label: "Community outreach and youth empowerment initiatives executed",
   },
   {
     value: "Global",
-    label: "Youth advocacy reach across digital & physical platforms",
+    label: "Youth advocacy and leadership impact across digital and physical platforms",
   },
 ];
 
@@ -47,8 +47,7 @@ const Impact = () => {
           <span className={styles.kicker}>Impact</span>
           <h2>Measured in People, Not Just Numbers</h2>
           <p>
-            My work is defined by outcomes — lives empowered, communities
-            strengthened, and systems built for long-term transformation.
+          My work is defined by outcomes. Lives empowered, communities strengthened, and systems built for long-term transformation.
           </p>
         </motion.header>
 
