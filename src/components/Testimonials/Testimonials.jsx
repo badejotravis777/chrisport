@@ -18,10 +18,31 @@ const testimonials = [
   },
   {
     quote:
+      "Christian is a systems thinker who understands that real brand growth goes beyond visibility. His approach to strategy, execution, and community impact is intentional, scalable, and results-driven. Working with him shows a rare balance of creativity, discipline, and long-term vision.",
+    name: "Badejo Travis",
+    role: "Founder & CEO, Travrick | CTO, Stratos HQ",
+  },
+  
+  {
+    quote:
       "Christian is a mentor and strategic thinker who brings complex visions to life with integrity and clarity. His expertise in branding and digital strategy consistently drives real results.",
     name: "Ayah Bonny",
     role: "Accounting & Finance Professional | ICAN in Progress",
   },
+
+  {
+    quote:
+      "Christian is a digital marketing powerhouse, combining creativity with data-driven strategies to transform brands. His expertise in visibility, engagement, and brand growth sets him apart as a certified marketer and industry game-changer.",
+    name: "Osumah Perpetua",
+    role: "Digital Marketing Specialist",
+  },
+  {
+    quote:
+      "Christian has been instrumental in transforming brands’ online presence. His marketing expertise and growth strategies consistently deliver impressive results. He is knowledgeable, responsive, and genuinely invested in client success.",
+    name: "Kalu Chioma Grace",
+    role: "Brand & Growth Consultant",
+  },
+  
 ];
 
 const Testimonials = () => {
@@ -37,8 +58,7 @@ const Testimonials = () => {
         <span className={styles.kicker}>Credibility</span>
         <h2>Trusted by Leaders & Collaborators</h2>
         <p>
-          Perspectives from professionals, founders, and community leaders who
-          have worked closely with me across different initiatives.
+        I’ve had the privilege of working with leaders, founders, and institutions across business, youth development, and community initiatives.
         </p>
       </motion.div>
 

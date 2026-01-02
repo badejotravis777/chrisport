@@ -8,13 +8,12 @@ const Gallery = () => {
 
   return (
     <section className={styles.gallery}>
-      {/* HEADER */}
+      {/* HEADER (simple fade, no viewport wait) */}
       <motion.div
         className={styles.header}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
         <span className={styles.kicker}>Moments</span>
         <h2>Highlights & Achievements</h2>
@@ -24,34 +23,30 @@ const Gallery = () => {
         </p>
       </motion.div>
 
-      {/* GALLERY */}
+      {/* GALLERY — IMMEDIATE RENDER */}
       <div className={styles.masonry}>
-        {galleryImages.map((img, index) => (
-          <motion.figure
+        {galleryImages.map((img) => (
+          <figure
             key={img.id}
             className={styles.item}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.06, duration: 0.7 }}
-            viewport={{ once: true }}
             onClick={() => setActiveImage(img)}
           >
             <div className={styles.imageWrap}>
               <img
                 src={img.src}
                 alt={img.caption}
-                loading="lazy"
+                loading="eager"
               />
             </div>
 
             <figcaption>
               <span>{img.caption}</span>
             </figcaption>
-          </motion.figure>
+          </figure>
         ))}
       </div>
 
-      {/* LIGHTBOX */}
+      {/* LIGHTBOX (KEEP ANIMATION) */}
       <AnimatePresence>
         {activeImage && (
           <motion.div
@@ -64,12 +59,11 @@ const Gallery = () => {
             <motion.img
               src={activeImage.src}
               alt={activeImage.caption}
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              transition={{ duration: 0.25 }}
             />
-
             <p>{activeImage.caption}</p>
           </motion.div>
         )}

@@ -140,4 +140,36 @@
     );
   }
   
+  /* Belief line */
+.belief {
+    max-width: 720px;
+    margin-bottom: 4rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.85;
+  }
+  
+  /* Clickable title */
+  .content h3 a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .content h3 a::after {
+    content: "↗";
+    margin-left: 0.4rem;
+    font-size: 0.9rem;
+    opacity: 0.6;
+  }
+  
+  .content h3 a:hover {
+    color: #f59e0b;
+  }
+  
+  /* Make image anchor behave like div */
+  .image {
+    display: block;
+    cursor: pointer;
+  }
   

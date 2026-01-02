@@ -167,3 +167,61 @@
     }
   }
   
+  .heroImage {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 420px;
+    max-width: 42vw;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .heroImage img {
+    width: 100%;
+    height: auto;
+  
+    /* soft shape */
+    border-radius: 28px;
+  
+    /* cinematic treatment */
+    filter: grayscale(100%) contrast(1.05) blur(0.3px);
+  
+    /* fade edges */
+    mask-image: radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 1) 48%,
+      rgba(0, 0, 0, 0) 78%
+    );
+    -webkit-mask-image: radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 1) 48%,
+      rgba(0, 0, 0, 0) 78%
+    );
+  
+    /* glow */
+    box-shadow:
+      0 0 120px rgba(245, 158, 11, 0.18),
+      inset 0 0 80px rgba(0, 0, 0, 0.4);
+  
+    /* subtle motion feel */
+    animation: float 14s ease-in-out infinite;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 900px) {
+    .heroImage {
+      display: none;
+    }
+  }
+      

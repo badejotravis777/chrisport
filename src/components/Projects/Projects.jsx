@@ -8,35 +8,40 @@ import glorylightImg from "../../assets/images/glorylight.png";
 import academyImg from "../../assets/images/academy.png";
 
 const projects = [
-  {
-    title: "Novalith Marketing",
-    role: "Founder & Lead Strategist",
-    description:
-      "A growth-focused marketing firm helping brands scale through digital storytelling, performance marketing, and strategic brand positioning.",
-    image: novalithImg,
-  },
-  {
-    title: "Stratos HQ",
-    role: "Co-Founder",
-    description:
-      "An innovation and media hub empowering creatives and startups with strategy, technology, and execution support.",
-    image: stratosImg,
-  },
-  {
-    title: "The Glorylight Initiative",
-    role: "Founder",
-    description:
-      "A community-focused initiative dedicated to feeding the hungry, restoring hope, and driving grassroots impact.",
-    image: glorylightImg,
-  },
-  {
-    title: "Glorylight Football Academy",
-    role: "Founder",
-    description:
-      "A youth football academy focused on discipline, leadership development, and talent nurturing through sports.",
-    image: academyImg,
-  },
-];
+    {
+      title: "Novalith Marketing",
+      role: "Founder & Lead Strategist",
+      description:
+        "A growth-focused marketing firm helping brands scale through digital storytelling, performance marketing, and strategic brand positioning.",
+      image: novalithImg,
+      link: "https://www.novalithmarketing.com.ng",
+    },
+    {
+      title: "Stratos HQ",
+      role: "Founder",
+      description:
+        "An innovation and media hub empowering creatives and startups with strategy, technology, and execution support.",
+      image: stratosImg,
+      link: "https://www.stratoshqapp.com",
+    },
+    {
+      title: "The Glorylight Initiative",
+      role: "Founder",
+      description:
+        "A community-focused initiative dedicated to feeding the hungry, restoring hope, and driving grassroots impact.",
+      image: glorylightImg,
+      link: "https://www.glorylightfc.com.ng",
+    },
+    {
+      title: "Glorylight Football Academy",
+      role: "Founder",
+      description:
+        "A youth football academy focused on discipline, leadership development, and talent nurturing through sports.",
+      image: academyImg,
+      link: "https://www.glorylightfc.com.ng",
+    },
+  ];
+  
 
 const container = {
   hidden: {},
@@ -52,7 +57,8 @@ const item = {
 
 const Projects = () => {
   return (
-    <section className={styles.projects}>
+    <section id="projects" className={styles.projects}>
+
       <motion.header
         className={styles.header}
         initial={{ opacity: 0, y: 30 }}
@@ -61,11 +67,11 @@ const Projects = () => {
       >
         <span className={styles.kicker}>Ventures</span>
         <h2>Projects & Impact</h2>
-        <p>
-          Organizations and initiatives I’ve founded, scaled, and led across
-          marketing, innovation, youth development, and community building.
-        </p>
-      </motion.header>
+        <p className={styles.belief}>
+  These ventures reflect my belief that real impact is built through systems,
+  not moments.
+</p>
+  </motion.header>
 
       <motion.div
         className={styles.list}
@@ -75,24 +81,41 @@ const Projects = () => {
         viewport={{ once: true }}
       >
         {projects.map((project, index) => (
-          <motion.article
-            key={index}
-            className={styles.project}
-            variants={item}
-          >
-            {/* IMAGE */}
-            <div className={styles.image}>
-              <img src={project.image} alt={project.title} />
-              <div className={styles.overlay} />
-            </div>
-
-            {/* CONTENT */}
-            <div className={styles.content}>
-              <span className={styles.role}>{project.role}</span>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-            </div>
-          </motion.article>
+         <motion.article
+         key={index}
+         className={styles.project}
+         variants={item}
+       >
+         {/* IMAGE (CLICKABLE) */}
+         <a
+           href={project.link}
+           target="_blank"
+           rel="noopener noreferrer"
+           className={styles.image}
+         >
+           <img src={project.image} alt={project.title} />
+           <div className={styles.overlay} />
+         </a>
+       
+         {/* CONTENT */}
+         <div className={styles.content}>
+           <span className={styles.role}>{project.role}</span>
+       
+           {/* TITLE (CLICKABLE) */}
+           <h3>
+             <a
+               href={project.link}
+               target="_blank"
+               rel="noopener noreferrer"
+             >
+               {project.title}
+             </a>
+           </h3>
+       
+           <p>{project.description}</p>
+         </div>
+       </motion.article>
+       
         ))}
       </motion.div>
     </section>

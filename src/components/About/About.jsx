@@ -36,7 +36,7 @@ const About = () => {
           <h2>Building Systems, Not Just Brands</h2>
 
           <p>
-            I’m a Nigerian entrepreneur, marketing strategist, and youth advocate
+            I’m Christian edward ngwu, a Nigerian entrepreneur, marketing strategist, and youth advocate
             focused on building scalable brands, communities, and initiatives
             that create measurable impact across Africa.
           </p>
