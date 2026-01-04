@@ -17,20 +17,32 @@ const Contact = () => {
 
         <p className={styles.description}>
           Whether it’s collaboration, consulting, speaking, or building
-          impactful initiatives — I’m always open to meaningful conversations.
+          impactful initiatives, I’m always open to meaningful conversations.
         </p>
 
         <div className={styles.actions}>
+          {/* PRIMARY CTA */}
           <a
-            href="mailto:christianchidubemedwardngwu@gmail.com"
+            href="https://wa.me/2349128430714?text=Hello%20Christian,%20I’d%20like%20to%20start%20a%20conversation."
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.primary}
           >
-            christianchidubemedwardngwu@gmail.com
+            Start a Conversation
           </a>
 
+          {/* EMAIL (SUBTLE) */}
+          <span className={styles.email}>
+            or email me at{" "}
+            <a href="mailto:christianchidubemedwardngwu@gmail.com">
+              christianchidubemedwardngwu@gmail.com
+            </a>
+          </span>
+
+          {/* SOCIALS */}
           <div className={styles.socials}>
             <a
-              href="https://www.instagram.com/thechristian.en?igsh=bzZvbXl4Mzh3Nzdu&utm_source=qr"
+              href="https://www.instagram.com/thechristian.en"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -1,47 +1,56 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import styles from "./Projects.module.css";
 
-// ✅ IMPORT IMAGES PROPERLY
+// ✅ IMPORT IMAGES
 import novalithImg from "../../assets/images/novalith.png";
 import stratosImg from "../../assets/images/stratos.png";
 import glorylightImg from "../../assets/images/glorylight.png";
 import academyImg from "../../assets/images/academy.png";
 
 const projects = [
-    {
-      title: "Novalith Marketing",
-      role: "Founder & Lead Strategist",
-      description:
-        "A growth-focused marketing firm helping brands scale through digital storytelling, performance marketing, and strategic brand positioning.",
-      image: novalithImg,
-      link: "https://www.novalithmarketing.com.ng",
-    },
-    {
-      title: "Stratos HQ",
-      role: "Founder",
-      description:
-        "An innovation and media hub empowering creatives and startups with strategy, technology, and execution support.",
-      image: stratosImg,
-      link: "https://www.stratoshqapp.com",
-    },
-    {
-      title: "The Glorylight Initiative",
-      role: "Founder",
-      description:
-        "A community-focused initiative dedicated to feeding the hungry, restoring hope, and driving grassroots impact.",
-      image: glorylightImg,
-      link: "https://www.glorylightfc.com.ng",
-    },
-    {
-      title: "Glorylight Football Academy",
-      role: "Founder",
-      description:
-        "A youth football academy focused on discipline, leadership development, and talent nurturing through sports.",
-      image: academyImg,
-      link: "https://www.glorylightfc.com.ng",
-    },
-  ];
-  
+  {
+    slug: "novalith-marketing",
+    title: "Novalith Marketing",
+    role: "Founder & Lead Strategist",
+    category: "Consulting, Brand Strategy, Growth Marketing",
+    description:
+      "A growth-focused marketing firm helping brands scale through strategic positioning and performance-driven marketing systems.",
+    image: novalithImg,
+    externalLink: "https://www.novalithmarketing.com.ng",
+  },
+  {
+    slug: "stratos-hq",
+    title: "Stratos HQ",
+    role: "Co-Founder",
+    status: "In Development",
+    category: "Innovation, Media, Startup Support",
+    description:
+      "An innovation and media hub supporting creatives and startups with strategy, technology, and execution frameworks.",
+    image: stratosImg,
+    externalLink: null,
+  },
+  {
+    slug: "glorylight-initiative",
+    title: "The Glorylight Initiative",
+    role: "Founder",
+    category: "Community Development, Social Impact",
+    description:
+      "A community-focused initiative dedicated to feeding the hungry and driving grassroots impact.",
+    image: glorylightImg,
+    externalLink: "https://www.glorylightfc.com.ng",
+  },
+  {
+    slug: "glorylight-football-academy",
+    title: "Glorylight Football Academy",
+    role: "Founder",
+    category: "Youth Development, Sports Leadership",
+    description:
+      "A youth football academy focused on discipline, leadership, and talent development through sports.",
+    image: academyImg,
+    externalLink: "https://www.glorylightfc.com.ng",
+  },
+];
 
 const container = {
   hidden: {},
@@ -58,7 +67,7 @@ const item = {
 const Projects = () => {
   return (
     <section id="projects" className={styles.projects}>
-
+      {/* HEADER */}
       <motion.header
         className={styles.header}
         initial={{ opacity: 0, y: 30 }}
@@ -68,11 +77,12 @@ const Projects = () => {
         <span className={styles.kicker}>Ventures</span>
         <h2>Projects & Impact</h2>
         <p className={styles.belief}>
-  These ventures reflect my belief that real impact is built through systems,
-  not moments.
-</p>
-  </motion.header>
+          These ventures reflect my belief that real impact is built through
+          systems, not moments.
+        </p>
+      </motion.header>
 
+      {/* PROJECT LIST */}
       <motion.div
         className={styles.list}
         variants={container}
@@ -80,42 +90,35 @@ const Projects = () => {
         whileInView="show"
         viewport={{ once: true }}
       >
-        {projects.map((project, index) => (
-         <motion.article
-         key={index}
-         className={styles.project}
-         variants={item}
-       >
-         {/* IMAGE (CLICKABLE) */}
-         <a
-           href={project.link}
-           target="_blank"
-           rel="noopener noreferrer"
-           className={styles.image}
-         >
-           <img src={project.image} alt={project.title} />
-           <div className={styles.overlay} />
-         </a>
-       
-         {/* CONTENT */}
-         <div className={styles.content}>
-           <span className={styles.role}>{project.role}</span>
-       
-           {/* TITLE (CLICKABLE) */}
-           <h3>
-             <a
-               href={project.link}
-               target="_blank"
-               rel="noopener noreferrer"
-             >
-               {project.title}
-             </a>
-           </h3>
-       
-           <p>{project.description}</p>
-         </div>
-       </motion.article>
-       
+        {projects.map((project) => (
+          <motion.article
+            key={project.slug}
+            className={styles.project}
+            variants={item}
+          >
+            {/* IMAGE → INTERNAL PAGE */}
+            <Link
+              to={`/projects/${project.slug}`}
+              className={styles.image}
+            >
+              <img src={project.image} alt={project.title} />
+              <div className={styles.overlay} />
+            </Link>
+
+            {/* CONTENT */}
+            <div className={styles.content}>
+              <span className={styles.role}>{project.role}</span>
+
+              {/* TITLE → INTERNAL PAGE */}
+              <h3>
+                <Link to={`/projects/${project.slug}`}>
+                  {project.title}
+                </Link>
+              </h3>
+
+              <p>{project.description}</p>
+            </div>
+          </motion.article>
         ))}
       </motion.div>
     </section>
