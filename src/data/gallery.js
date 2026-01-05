@@ -92,14 +92,14 @@ export const galleryImages = [
   },
   {
     id: 19,
-    src: img19,
+    src: img16,
     title: "Program Rollout & Volunteer Coordination",
     description:
       "Coordinating volunteers and resources during program rollouts to ensure smooth delivery and maximum community reach."
   },
   {
     id: 20,
-    src: img20,
+    src: img17,
     title: "Glorylight Football Academy — Graduation Ceremony",
     description:
       "Celebrating participants of the Glorylight Football Academy as they receive certificates, marking progress in discipline, leadership development, and talent nurturing through sports."
