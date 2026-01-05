@@ -64,6 +64,14 @@ const testimonials = [
         name: "OKAFOR RUTH",
         role: "",
       },
+
+      {
+  quote:
+    "Christian brings a rare combination of strategic insight, empathy, and executional excellence. His ability to translate ideas into structured, impactful initiatives sets him apart as a leader who truly understands people, systems, and long-term value creation. Working with him reflects clarity of vision, discipline in delivery, and a deep commitment to meaningful impact.",
+  name: "Princess Ojoma Oketupa",
+  role: "",
+},
+
     
   ];
   
