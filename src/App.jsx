@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import styles from "./App.module.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
@@ -13,28 +14,32 @@ import ProjectDetail from "./pages/ProjectDetail";
 
 function App() {
   return (
-    <Routes>
-      {/* HOME */}
-      <Route
-        path="/"
-        element={
-          <div className={styles.app}>
-            <Hero />
-            <About />
-            <Impact />
-            <Projects />
-            <Gallery />
-            <Testimonials />
-            <Contact />
-          </div>
-        }
-      />
+    <>
+      {/* GLOBAL SCROLL RESET */}
+      <ScrollToTop />
 
-      {/* PROJECT DETAIL */}
-      <Route path="/projects/:slug" element={<ProjectDetail />} />
-    </Routes>
+      <Routes>
+        {/* HOME */}
+        <Route
+          path="/"
+          element={
+            <div className={styles.app}>
+              <Hero />
+              <About />
+              <Impact />
+              <Projects />
+              <Gallery />
+              <Testimonials />
+              <Contact />
+            </div>
+          }
+        />
+
+        {/* PROJECT DETAIL */}
+        <Route path="/projects/:slug" element={<ProjectDetail />} />
+      </Routes>
+    </>
   );
 }
 
 export default App;
- 
